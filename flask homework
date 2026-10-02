@@ -1,0 +1,16 @@
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    facts = [
+        'Люблю Неву досмерти',
+        'Приговор закончен 7 раз',
+        'Я живу в стамбуле'
+    ]
+    return "<br>".join(facts)
+
+app.run(debug=True)
+
